@@ -49,13 +49,6 @@ O projeto foi estruturado com foco em escalabilidade e legibilidade:
 ```
 ├── src/
 │   ├── lib/
-│   │   ├── assets/
-│   │   │   ├── crew/
-│   │   │   ├── destination/
-│   │   │   ├── home/
-│   │   │   ├── shared/
-│   │   │   ├── technology/
-│   │   │   └── favicon-32x32.png
 │   │   ├── components/
 │   │   │   ├── Dots.svelte
 │   │   │   ├── Header.svelte
@@ -82,6 +75,13 @@ O projeto foi estruturado com foco em escalabilidade e legibilidade:
 │   │   └── +page.svelte
 │   └── app.html
 ├── static/
+│   ├── assets/
+│   │   ├── crew/
+│   │   ├── destination/
+│   │   ├── home/
+│   │   ├── shared/
+│   │   ├── technology/
+│   │   └── favicon-32x32.png
 │   └── robots.txt
 ├── .gitignore
 ├── .npmrc
