@@ -1,5 +1,4 @@
 <script>
-	import favicon from '$lib/assets/favicon-32x32.png';
 	import Header from '$lib/components/Header.svelte';
 	import { page } from '$app/stores';
 
@@ -9,6 +8,10 @@
 
 	let pathname = $derived($page.url.pathname);
 </script>
+
+<svelte:head>
+	<link rel="icon" href="/assets/favicon-32x32.png" />
+</svelte:head>
 
 <div class="page" data-route={pathname}>
 	<Header />

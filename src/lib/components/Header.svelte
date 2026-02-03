@@ -23,7 +23,7 @@
 
 <header class="header">
 	<div class="header__logo">
-		<img src="./src/lib/assets/shared/logo.svg" alt="Space Tourism logo" />
+		<img src="assets/shared/logo.svg" alt="Space Tourism logo" />
 	</div>
 
 	<span class="header__line" aria-hidden="true"></span>
@@ -36,8 +36,8 @@
 		<span class="sr-only">Toggle navigation</span>
 		<img
 			src={openMenu
-				? 'src/lib/assets/shared/icon-close.svg'
-				: 'src/lib/assets/shared/icon-hamburger.svg'}
+				? 'assets/shared/icon-close.svg'
+				: 'assets/shared/icon-hamburger.svg'}
 			alt=""
 			aria-hidden="true"
 		/>
