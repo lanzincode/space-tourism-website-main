@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer tokens;
+
+@layer tokens {
+	:root {
+		--color-primary-300: hsl(231 77 90);
+		--color-primary-900: hsl(230 35 7);
+
+		--white: #ffffff;
+		--black: #000000;
+
+		--gray-50: #f9fafb;
+		--gray-100: #f3f4f6;
+		--gray-200: #e5e7eb;
+		--gray-300: #d1d5db;
+		--gray-400: #9ca3af;
+		--gray-500: #6b7280;
+		--gray-600: #4b5563;
+		--gray-700: #374151;
+		--gray-800: #1f2937;
+		--gray-900: #111827;
+
+		--indigo-500: #6366f1;
+		--blue-500: #4c6ef5;
+		--green-500: #22c55e;
+		--red-500: #ef4444;
+		--yellow-500: #f59e0b;
+
+		--color-bg: var(--gray-50);
+		--color-surface: var(--white);
+		--color-text: var(--gray-900);
+		--color-text-muted: var(--gray-500);
+		--color-border: var(--gray-200);
+
+		--color-primary: var(--indigo-500);
+		--color-secondary: var(--blue-500);
+		--color-success: var(--green-500);
+		--color-danger: var(--red-500);
+		--color-warning: var(--yellow-500);
+
+		--font-sans:
+			system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+		--font-mono:
+			ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+		--ff-3: 'Barlow', sans-serif;
+		--ff-2: 'Barlow Condensed', sans-serif;
+		--ff-1: 'Bellefair', sans-serif;
+
+		--fs-xs: clamp(0.6875rem, 0.6215rem + 0.2817vw, 0.875rem);
+		--fs-s: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+		--fs-m: clamp(0.8125rem, 0.7025rem + 0.4695vw, 1.125rem);
+		--fs-l: clamp(1.3125rem, 1.1585rem + 0.6573vw, 1.75rem);
+		--fs-xl: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+		--fs-2xl: clamp(2.625rem, 2.3169rem + 1.3146vw, 3.5rem);
+		--fs-3xl: clamp(4.6875rem, 4.1373rem + 2.3474vw, 6.25rem);
+		--fs-4xl: clamp(6.75rem, 5.9577rem + 3.3803vw, 9rem);
+
+		/* One-up pairs */
+		--fs-xs-s: clamp(0.6875rem, 0.5775rem + 0.4695vw, 1rem);
+		--fs-s-m: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
+		--fs-m-l: clamp(0.8125rem, 0.4824rem + 1.4085vw, 1.75rem);
+		--fs-l-xl: clamp(1.3125rem, 1.0704rem + 1.0329vw, 2rem);
+		--fs-xl-2xl: clamp(1.5rem, 0.7958rem + 3.0047vw, 3.5rem);
+		--fs-2xl-3xl: clamp(2.625rem, 1.3486rem + 5.446vw, 6.25rem);
+		--fs-3xl-4xl: clamp(4.6875rem, 3.169rem + 6.4789vw, 9rem);
+
+		--fw-light: 300;
+		--fw-regular: 400;
+		--fw-medium: 500;
+		--fw-semibold: 600;
+		--fw-bold: 700;
+		--fw-black: 800;
+
+		--lh-tight: 1.1;
+		--lh-snug: 1.25;
+		--lh-normal: 1.5;
+		--lh-relaxed: 1.7;
+
+		--text-body-size: var(--fs-md);
+		--text-body-weight: var(--fw-regular);
+		--text-body-line: var(--lh-normal);
+
+		--text-heading-weight: var(--fw-semibold);
+		--text-heading-line: var(--lh-tight);
+
+		--text-muted-color: var(--color-text-muted);
+
+		--space-4xs: clamp(0.125rem, 0.125rem + 0vw, 0.125rem);
+		--space-3xs: clamp(0.1875rem, 0.1875rem + 0.0694vw, 0.25rem);
+		--space-2xs: clamp(0.375rem, 0.375rem + 0.1389vw, 0.5rem);
+		--space-xs: clamp(0.5625rem, 0.5625rem + 0.2083vw, 0.75rem);
+		--space-s: clamp(0.75rem, 0.75rem + 0.2778vw, 1rem);
+		--space-m: clamp(1.125rem, 1.125rem + 0.4167vw, 1.5rem);
+		--space-l: clamp(1.5rem, 1.5rem + 0.5556vw, 2rem);
+		--space-xl: clamp(1.875rem, 1.875rem + 0.6944vw, 2.5rem);
+		--space-2xl: clamp(2.25rem, 2.25rem + 0.8333vw, 3rem);
+		--space-3xl: clamp(3rem, 3rem + 1.1111vw, 4rem);
+		--space-4xl: clamp(3.75rem, 3.75rem + 1.3889vw, 5rem);
+		--space-5xl: clamp(4.5rem, 4.5rem + 1.6667vw, 6rem);
+		--space-6xl: clamp(6rem, 6rem + 2.2222vw, 8rem);
+
+		/* One-up pairs */
+		--space-4xs-3xs: clamp(0.125rem, 0.125rem + 0.1389vw, 0.25rem);
+		--space-3xs-2xs: clamp(0.1875rem, 0.1875rem + 0.3472vw, 0.5rem);
+		--space-2xs-xs: clamp(0.375rem, 0.375rem + 0.4167vw, 0.75rem);
+		--space-xs-s: clamp(0.5625rem, 0.5625rem + 0.4861vw, 1rem);
+		--space-s-m: clamp(0.75rem, 0.75rem + 0.8333vw, 1.5rem);
+		--space-m-l: clamp(1.125rem, 1.125rem + 0.9722vw, 2rem);
+		--space-l-xl: clamp(1.5rem, 1.5rem + 1.1111vw, 2.5rem);
+		--space-xl-2xl: clamp(1.875rem, 1.875rem + 1.25vw, 3rem);
+		--space-2xl-3xl: clamp(2.25rem, 2.25rem + 1.9444vw, 4rem);
+		--space-3xl-4xl: clamp(3rem, 3rem + 2.2222vw, 5rem);
+		--space-4xl-5xl: clamp(3.75rem, 3.75rem + 2.5vw, 6rem);
+		--space-5xl-6xl: clamp(4.5rem, 4.5rem + 3.8889vw, 8rem);
+
+		--container-max: 120rem;
+		--container-padding: var(--space-lg);
+
+		--section-padding-block: var(--space-2xl);
+		--section-padding-inline: var(--space-lg);
+
+		--flow-space: var(--space-md);
+
+		--radius-sm: 0.6rem;
+		--radius-md: 0.8rem;
+		--radius-lg: 1.6rem;
+		--radius-xl: 2.4rem;
+		--radius-full: 9999px;
+
+		--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+		--shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+		--shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+
+		--ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+		--duration-fast: 150ms;
+		--duration-md: 300ms;
+		--duration-slow: 500ms;
+
+		--z-base: 0;
+		--z-header: 10;
+		--z-dropdown: 20;
+		--z-modal: 30;
+		--z-toast: 40;
+
+		--btn-radius: var(--radius-full);
+		--btn-padding: var(--space-sm) var(--space-lg);
+		--btn-font-size: var(--fs-sm);
+
+		--card-padding: var(--space-lg);
+		--card-radius: var(--radius-lg);
+	}
+}
