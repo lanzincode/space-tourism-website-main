@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
 
 	let openMenu = $state(false);
@@ -35,9 +36,7 @@
 	>
 		<span class="sr-only">Toggle navigation</span>
 		<img
-			src={openMenu
-				? 'assets/shared/icon-close.svg'
-				: 'assets/shared/icon-hamburger.svg'}
+			src={openMenu ? 'assets/shared/icon-close.svg' : 'assets/shared/icon-hamburger.svg'}
 			alt=""
 			aria-hidden="true"
 		/>
@@ -45,10 +44,10 @@
 	<button aria-hidden="true" class="overlay" onclick={closeMenu} data-open={openMenu}></button>
 	<nav class="header__nav" aria-label="Primary navigation" data-open={openMenu}>
 		<ul class="header__list">
-			{#each links as link}
+			{#each links as link (link.href)}
 				<li>
 					<a
-						href={link.href}
+						href={resolve(link.href)}
 						class:active={pathname === link.href}
 						onclick={closeMenu}
 						aria-current={pathname === link.href ? 'page' : undefined}
